@@ -1,4 +1,7 @@
 
+
+
+
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
@@ -11,16 +14,16 @@ const brands = [
     city: "Jaipur",
     category: "Fashion",
     price: 2499,
-    image: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=900",
+    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=900",
     tagline: "Tradition, reimagined for today.",
-    story: "Aara Studio celebrates Indian textiles through contemporary clothing. Inspired by the colours, crafts and traditions of Rajasthan, the studio brings heritage into everyday fashion.",
+    story: "Aara Studio celebrates Indian textiles through contemporary clothing, inspired by the colours, crafts and traditions of Rajasthan.",
     founder: "A sample founder story about the inspiration behind Aara Studio.",
     email: "hello@aarastudio.example",
     products: [
       {
         name: "Signature Collection",
         description: "Contemporary clothing inspired by Indian textiles.",
-        image: "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?w=700",
+        image:  "https://images.unsplash.com/photo-1483985988355-763728e1935b?w=700",
       },
       {
         name: "Everyday Collection",
@@ -30,7 +33,7 @@ const brands = [
     ],
     shippingCountries: ["USA", "United Kingdom", "UAE", "Singapore"],
     languages: ["English", "Hindi"],
-    exportInfo: "Contact the brand owner for international shipping and export enquiries.",
+    exportInfo: "Contact the brand owner for international shipping enquiries.",
   },
   {
     id: 2,
@@ -41,7 +44,7 @@ const brands = [
     price: 899,
     image: "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=900",
     tagline: "Rooted in nature. Made with care.",
-    story: "Nira Botanics is a sample natural skincare brand inspired by botanical ingredients and traditional Indian self-care practices.",
+    story: "Nira Botanics is a sample skincare brand inspired by botanical ingredients and traditional Indian self-care.",
     founder: "A sample founder story about natural ingredients and thoughtful skincare.",
     email: "hello@nirabotanics.example",
     products: [
@@ -58,7 +61,7 @@ const brands = [
     ],
     shippingCountries: ["USA", "UAE", "Singapore"],
     languages: ["English", "Kannada", "Hindi"],
-    exportInfo: "Contact the brand owner to confirm international orders and export availability.",
+    exportInfo: "Contact the brand owner to confirm international orders.",
   },
   {
     id: 3,
@@ -69,8 +72,8 @@ const brands = [
     price: 1599,
     image: "https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?w=900",
     tagline: "Handmade objects with a story.",
-    story: "Mitti Form celebrates handmade pottery. Inspired by traditional Indian craftsmanship, each creation brings warmth and character into everyday spaces.",
-    founder: "A sample founder story about handmade pottery and traditional craft.",
+    story: "Mitti Form celebrates handmade pottery inspired by traditional Indian craftsmanship.",
+    founder: "A sample founder story about handmade pottery.",
     email: "hello@mittiform.example",
     products: [
       {
@@ -86,7 +89,7 @@ const brands = [
     ],
     shippingCountries: ["United Kingdom", "USA", "UAE"],
     languages: ["English", "Tamil"],
-    exportInfo: "Contact the brand owner for product availability and export details.",
+    exportInfo: "Contact the brand owner for product availability.",
   },
   {
     id: 5,
@@ -97,7 +100,7 @@ const brands = [
     price: 3200,
     image: "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?w=900",
     tagline: "Woven by heritage.",
-    story: "Tantu Collective is a sample textile brand inspired by traditional weaving and embroidery in Kutch. It brings regional craft and contemporary design together.",
+    story: "Tantu Collective is a sample textile brand inspired by traditional weaving and embroidery in Kutch.",
     founder: "A sample founder story about preserving traditional textile crafts.",
     email: "hello@tantucollective.example",
     products: [
@@ -108,13 +111,13 @@ const brands = [
       },
       {
         name: "Handcrafted Collection",
-        description: "A sample collection celebrating Indian craft.",
+        description: "A collection celebrating Indian craft.",
         image: "https://images.unsplash.com/photo-1600166898405-da9535204843?w=700",
       },
     ],
     shippingCountries: ["USA", "United Kingdom", "France"],
     languages: ["English", "Gujarati", "Hindi"],
-    exportInfo: "Contact the brand owner for international orders and export enquiries.",
+    exportInfo: "Contact the brand owner for international orders.",
   },
   {
     id: 7,
@@ -125,7 +128,7 @@ const brands = [
     price: 1899,
     image: "https://images.unsplash.com/photo-1611652022419-a9419f74343d?w=900",
     tagline: "Jewellery inspired by heritage.",
-    story: "Aarvi Jewels is a sample jewellery brand inspired by traditional Indian designs and contemporary craftsmanship.",
+    story: "Aarvi Jewels is a sample jewellery brand inspired by traditional Indian designs.",
     founder: "A sample founder story about traditional jewellery design.",
     email: "hello@aarvijewels.example",
     products: [
@@ -142,7 +145,7 @@ const brands = [
     ],
     shippingCountries: ["USA", "UAE", "United Kingdom"],
     languages: ["English", "Hindi"],
-    exportInfo: "Contact the brand owner for international orders and export details.",
+    exportInfo: "Contact the brand owner for international orders.",
   },
   {
     id: 8,
@@ -153,8 +156,8 @@ const brands = [
     price: 1499,
     image: "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=900",
     tagline: "Walk with your own story.",
-    story: "Sole Stories is a sample footwear brand combining modern designs with traditional Indian craftsmanship.",
-    founder: "A sample founder story about comfortable and handcrafted footwear.",
+    story: "Sole Stories is a sample footwear brand combining modern designs with traditional craftsmanship.",
+    founder: "A sample founder story about handcrafted footwear.",
     email: "hello@solestories.example",
     products: [
       {
@@ -170,7 +173,7 @@ const brands = [
     ],
     shippingCountries: ["USA", "Singapore", "UAE"],
     languages: ["English", "Kannada"],
-    exportInfo: "Contact the brand owner for international shipping information.",
+    exportInfo: "Contact the brand owner for international shipping.",
   },
   {
     id: 9,
@@ -181,7 +184,7 @@ const brands = [
     price: 999,
     image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=900",
     tagline: "Little details. Lasting impressions.",
-    story: "The Loom Edit is a sample accessories brand inspired by Indian textiles and handcrafted designs.",
+    story: "The Loom Edit is a sample accessories brand inspired by Indian textiles.",
     founder: "A sample founder story about creating accessories inspired by Indian textiles.",
     email: "hello@theloomedit.example",
     products: [
@@ -198,7 +201,7 @@ const brands = [
     ],
     shippingCountries: ["USA", "United Kingdom", "France"],
     languages: ["English", "Hindi"],
-    exportInfo: "Contact the brand owner for international orders and export details.",
+    exportInfo: "Contact the brand owner for international orders.",
   },
 ];
 
@@ -237,9 +240,18 @@ export default function Home() {
   const [currency, setCurrency] = useState("INR");
   const [search, setSearch] = useState("");
   const [selectedBrand, setSelectedBrand] = useState(null);
-  const [saved, setSaved] = useState([]);
+  const [saved, setSaved] = useState(() => {
+  if (typeof window !== "undefined") {
+    try {
+      return JSON.parse(localStorage.getItem("khoj-saved-brands")) || [];
+    } catch {
+      return [];
+    }
+  }
+  return [];
+});
+  
 
-  // Open a brand profile directly through its shareable link.
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const brandId = Number(params.get("brand"));
@@ -249,6 +261,9 @@ export default function Home() {
       if (brand) setSelectedBrand(brand);
     }
   }, []);
+  useEffect(() => {
+  localStorage.setItem("khoj-saved-brands", JSON.stringify(saved));
+}, [saved]);
 
   const filteredBrands = useMemo(() => {
     return brands.filter((brand) => {
@@ -265,21 +280,14 @@ export default function Home() {
         brand.state,
         brand.category,
         ...brand.products.map((product) => product.name),
-      ]
-        .join(" ")
-        .toLowerCase();
+      ].join(" ").toLowerCase();
 
       const matchesSearch = searchableText.includes(search.toLowerCase());
 
       const matchesSaved =
         activePage !== "Saved Brands" || saved.includes(brand.id);
 
-      return (
-        matchesState &&
-        matchesCategory &&
-        matchesSearch &&
-        matchesSaved
-      );
+      return matchesState && matchesCategory && matchesSearch && matchesSaved;
     });
   }, [selectedState, selectedCategory, search, activePage, saved]);
 
@@ -307,17 +315,23 @@ export default function Home() {
   }
 
   function shareBrand(brand) {
-    const shareUrl = `${window.location.origin}${window.location.pathname}?brand=${brand.id}`;
+  const shareUrl = `${window.location.origin}${window.location.pathname}?brand=${brand.id}`;
 
-    if (navigator.clipboard?.writeText) {
-      navigator.clipboard
-        .writeText(shareUrl)
-        .then(() => alert("Brand profile link copied!"))
-        .catch(() => window.prompt("Copy this brand profile link:", shareUrl));
-    } else {
-      window.prompt("Copy this brand profile link:", shareUrl);
-    }
+  if (navigator.share) {
+    navigator.share({
+      title: `${brand.name} | KHOJ GLOBAL`,
+      text: `Discover ${brand.name} on KHOJ GLOBAL.`,
+      url: shareUrl,
+    }).catch(() => {});
+  } else if (navigator.clipboard?.writeText) {
+    navigator.clipboard
+      .writeText(shareUrl)
+      .then(() => alert("Brand profile link copied!"))
+      .catch(() => window.prompt("Copy this link:", shareUrl));
+  } else {
+    window.prompt("Copy this brand profile link:", shareUrl);
   }
+}
 
   function filterByState(state) {
     setSelectedState(state);
@@ -328,7 +342,6 @@ export default function Home() {
 
   return (
     <main>
-      {/* Navigation */}
       <nav className="navbar">
         <button className="logo" onClick={() => navigate("Home")}>
           KHOJ<span>.</span>
@@ -350,7 +363,6 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Home Page */}
       {activePage === "Home" && (
         <>
           <section className="hero">
@@ -396,17 +408,14 @@ export default function Home() {
 
           <section className="intro-strip">
             <p>ONE COUNTRY. MANY STORIES.</p>
-
             <h2>
               Local roots. <em>Global possibilities.</em>
             </h2>
-
             <p className="intro-text">
               Meet the people, places and ideas behind India's independent brands.
             </p>
           </section>
 
-          {/* Explore by State */}
           <section className="section">
             <div className="section-heading">
               <div>
@@ -456,7 +465,6 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Featured Brands */}
           <section className="featured-section">
             <div className="section-heading">
               <div>
@@ -483,21 +491,17 @@ export default function Home() {
             />
           </section>
 
-          {/* Brand Stories Banner */}
           <section className="story-banner">
             <div>
               <p className="eyebrow">BEHIND EVERY BRAND</p>
-
               <h2>
                 Every creation
                 <br />
                 has a <em>story.</em>
               </h2>
-
               <p>
                 Discover the founders, traditions and inspiration behind the products.
               </p>
-
               <button
                 className="light-btn"
                 onClick={() => navigate("Brand Stories")}
@@ -509,7 +513,6 @@ export default function Home() {
         </>
       )}
 
-      {/* Discover, Saved Brands and Brand Stories */}
       {(activePage === "Discover" ||
         activePage === "Saved Brands" ||
         activePage === "Brand Stories") && (
@@ -567,6 +570,18 @@ export default function Home() {
                   </option>
                 ))}
               </select>
+              <button
+  type="button"
+  className="text-btn"
+  onClick={() => {
+    setSearch("");
+    setSelectedState("All States");
+    setSelectedCategory("All Categories");
+    setCurrency("INR");
+  }}
+>
+  Reset filters ↺
+</button>
             </div>
           )}
 
@@ -623,6 +638,7 @@ export default function Home() {
                       setSearch("");
                       setSelectedState("All States");
                       setSelectedCategory("All Categories");
+
                       if (activePage === "Saved Brands") {
                         navigate("Discover");
                       }
@@ -638,8 +654,42 @@ export default function Home() {
           )}
         </section>
       )}
+      
+<section className="contact-section">
+  <div className="contact-content">
+    <p className="eyebrow">LET'S CONNECT</p>
 
-      {/* Footer */}
+    <h2>
+      Have a question? <em>Talk to us.</em>
+    </h2>
+
+    <p>
+      Interested in discovering Indian brands or collaborating
+      with KHOJ GLOBAL? We'd love to hear from you.
+    </p>
+
+    <a
+      href="mailto:contact@khojglobal.example"
+      className="primary-btn"
+    >
+      Contact Us ↗
+    </a>
+  </div>
+</section>
+
+<button
+  className="back-to-top"
+  onClick={() =>
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    })
+  }
+>
+  ↑ Back to top
+</button>
+
+
       <footer className="footer">
         <div>
           <button className="logo footer-logo" onClick={() => navigate("Home")}>
@@ -656,7 +706,6 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* Brand Profile Modal */}
       {selectedBrand && (
         <div
           className="modal-overlay"
@@ -685,10 +734,7 @@ export default function Home() {
               </p>
 
               <h2>{selectedBrand.name}</h2>
-
-              <p className="modal-tagline">
-                {selectedBrand.tagline}
-              </p>
+              <p className="modal-tagline">{selectedBrand.tagline}</p>
 
               <h3>The story behind the brand</h3>
               <p>{selectedBrand.story}</p>
@@ -788,7 +834,11 @@ function BrandGrid({
                 saved.includes(brand.id) ? "is-saved" : ""
               }`}
               onClick={() => toggleSaved(brand.id)}
-              aria-label="Save brand"
+              aria-label={
+                saved.includes(brand.id)
+                  ? "Remove saved brand"
+                  : "Save brand"
+              }
               aria-pressed={saved.includes(brand.id)}
             >
               {saved.includes(brand.id) ? "♥" : "♡"}
@@ -803,6 +853,7 @@ function BrandGrid({
             </p>
 
             <h3>{brand.name}</h3>
+
             <p className="brand-tagline">{brand.tagline}</p>
 
             <div className="card-bottom">
