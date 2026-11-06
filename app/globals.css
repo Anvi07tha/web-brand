@@ -926,3 +926,46 @@ h2 em {
 }
 
 
+.contact-section {
+  padding: 85px 8%;
+  background: #f4efe8;
+  text-align: center;
+}
+
+.contact-content {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.contact-content h2 {
+  font-size: clamp(30px, 4vw, 46px);
+  margin: 15px 0;
+}
+
+.contact-content h2 em {
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+
+.contact-content > p:not(.eyebrow) {
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.back-to-top {
+  display: block;
+  margin: 0 auto 25px;
+  padding: 11px 22px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.back-to-top:hover {
+  background: #e9e1d6;
+}
+
